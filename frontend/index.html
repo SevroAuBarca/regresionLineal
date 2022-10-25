@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/dracula-ui/styles/dracula-ui.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+
+    <title>Vite + TS</title>
+  </head>
+  <body class="drac-box drac-bg-black">
+    <div id="app" class="drac-box drac-bg-black">
+      <div class="container">
+        <header class="drac-p-md">
+          <h1 class="drac-heading drac-heading-xl drac-text-white">
+            Regresion Lineal
+          </h1>
+        </header>
+        <main class="content">
+          <div class="drac-box drac-border-purple drac-rounded-lg form">
+            <form class="form">
+              <table class="drac-table">
+                <thead>
+                  <th class="drac-text drac-text-white">X</th>
+                  <th class="drac-text drac-text-white">Y</th>
+                </thead>
+                <tbody class="tbody">
+                  <tr>
+                    <td>
+                      <input
+                        type="number"
+                        placeholder="X"
+                        class="dataX drac-input drac-input-purple drac-text-purple"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        placeholder="Y"
+                        class="dataY drac-input drac-input-purple drac-text-purple"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div></div>
+            </form>
+            <div class="drac-box drac-p-sm div-buttons">
+              <button class="button-add drac-btn drac-bg-green">Añadir</button>
+              <button class="button-del drac-btn drac-bg-red">Borrar</button>
+              <button class="button-submit drac-btn drac-bg-purple">
+                Enviar
+              </button>
+            </div>
+          </div>
+          <div class="drac-border-purple drac-rounded-lg data-resultados">
+            <div class="area-results">
+              <div id="tabla" class="table-data">
+                <canvas id="myChart" class="hide"></canvas>
+                <table class="drac-table table hide">
+                  <thead>
+                    <th class="drac-text drac-text-white">X</th>
+                    <th class="drac-text drac-text-white">Y</th>
+                    <th class="drac-text drac-text-white">
+                      (X - <span class="letter">X</span>)
+                    </th>
+                    <th class="drac-text drac-text-white">
+                      (Y - <span class="letter">Y</span>)
+                    </th>
+                    <th class="drac-text drac-text-white">
+                      (X - <span class="letter">X</span>)<sup>2</sup>
+                    </th>
+                    <th class="drac-text drac-text-white">
+                      (Y - <span class="letter">Y</span>)<sup>2</sup>
+                    </th>
+                    <th class="drac-text drac-text-white">
+                      (X - <span class="letter">X</span>) (Y -
+                      <span class="letter">Y</span>)
+                    </th>
+                  </thead>
+                  <tbody class="tbody-results"></tbody>
+                </table>
+                <table class="drac-table table hide">
+                  <thead>
+                    <th class="drac-text drac-text-white">
+                      <span class="letter">X</span>
+                    </th>
+                    <th class="drac-text drac-text-white">
+                      <span class="letter">Y</span>
+                    </th>
+                    <th class="drac-text drac-text-white">S<sub>x</sub></th>
+                    <th class="drac-text drac-text-white">S<sub>y</sub></th>
+                    <th class="drac-text drac-text-white">S<sub>xy</sub></th>
+                    <th class="drac-text drac-text-white">r</th>
+                    <th class="drac-text drac-text-white">r<sup>2</sup></th>
+                  </thead>
+                  <tbody class="tbody-results2"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
